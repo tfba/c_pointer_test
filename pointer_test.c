@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 extern void hexdump(void *mem, unsigned int len);
 
@@ -28,6 +29,7 @@ char *hellostr = "Hello world\n";
 int a12[3][4] = {0,1,2,3,4,5,6,7,8,9,10,11};
 char hellostrarr[] = "array_Hello world\n";
 
+char *newheapregion = NULL;
 
 int  main()
 {
@@ -37,7 +39,14 @@ int  main()
 
     hexdump(hellostr, 50);
     
+    newheapregion = malloc(100);
+    strcpy(newheapregion, "newheapaddress region~~~");
+    hexdump(newheapregion, 50);
+    
+
 	func1();
+
+    free(newheapregion);
 	return 1;
 }
 
