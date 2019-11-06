@@ -31,10 +31,12 @@ char hellostrarr[] = "array_Hello world\n";
 
 int  main()
 {
-	printf("Hello world ~ \nhellostr = \"%s\" \n hellostrarr = \"%s\"\n", hellostr, hellostrarr);
-
+	printf("DataRegion ~ \nhellostr (0x%016llx)= \"%s\" \n hellostrarr = \"%s\"\n", hellostr, hellostr, hellostrarr);
+    
     hexdump(vowels, 500);
 
+    hexdump(hellostr, 50);
+    
 	func1();
 	return 1;
 }

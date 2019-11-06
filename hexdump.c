@@ -9,7 +9,7 @@ void hexdump(void *mem, unsigned int len)
 {
         unsigned int i, j;
         
-        printf("DUMP ADDR :: 0x%016llx [%d]\n\n", mem, len);
+        printf("\nDUMP ADDR :: 0x%016llx [%d]\n\n", mem, len);
         for(i = 0; i < len + ((len % HEXDUMP_COLS) ? (HEXDUMP_COLS - len % HEXDUMP_COLS) : 0); i++)
         {
                 /* print offset */
