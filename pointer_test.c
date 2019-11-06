@@ -35,7 +35,7 @@ int  main()
 {
 	printf("DataRegion ~ \nhellostr (0x%016llx)= \"%s\" \n hellostrarr = \"%s\"\n", hellostr, hellostr, hellostrarr);
     
-    hexdump(vowels, 500);
+    hexdump(vowels, 200);
 
     hexdump(hellostr, 50);
     
